@@ -1,0 +1,12 @@
+#!/bin/bash
+# -----------------------
+# bin/szle-chroot
+# -----------------------
+# Copyright (C) 2026 SizzleOS
+# SizzleOS is licensed under GPLv3
+# Full terms at https://www.gnu.org/licenses/gpl-3.0.html
+
+out() { printf "/bin/szle-chroot \n"; printf "%s\n" "$@"; }
+ThrowWarn() { printf "/bin/szle-chroot\n"; printf "\033[0;33mWarn ==> $1\033[0m "; printf "\n"; } >&2
+ThrowErr() { printf "/bin/szle-chroot\n"; printf "\033[0;31mErr ==> $1"; printf "\n"; } >&2
+SelfKill() { ThrowErr "$@"; exit 1; }
